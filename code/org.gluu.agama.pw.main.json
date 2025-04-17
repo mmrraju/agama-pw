@@ -798,7 +798,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -835,6 +835,47 @@
 				"height": 124
 			},
 			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+			"type": "callNode",
+			"position": {
+				"x": 1570.3891315293552,
+				"y": 1325.0972828823387
+			},
+			"data": {
+				"id": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+				"type": "callNode",
+				"position": {
+					"x": 1578,
+					"y": 1327
+				},
+				"previousNodeId": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "getUserEntityByMail",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "E",
+					"callType": "Call method on instance",
+					"arguments": [
+						"mailForm.mail"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check user exist or not with this mail.",
+					"asssignedVariableName": "user"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -1272,11 +1313,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239source_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239_repeat-assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0ftarget_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f"
+		},
+		{
+			"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645-callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+			"type": "default",
+			"source": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+			"target": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645"
 		}
 	],
 	"viewport": {
-		"x": -643.9644240057871,
-		"y": -1018.1693315792318,
+		"x": -1292.9644240057871,
+		"y": -1065.1693315792318,
 		"zoom": 1.051128400241857
 	}
 }
