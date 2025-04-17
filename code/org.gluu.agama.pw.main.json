@@ -666,7 +666,7 @@
 				"previousNodeId": "whenNode-cd8f9932-9961-4283-9c95-486d04d556f7",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "\"Forget password\"",
+					"logMessage": "\"Forget password portion starting\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -681,7 +681,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -805,8 +805,8 @@
 			"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
 			"type": "rrfNode",
 			"position": {
-				"x": 1328,
-				"y": 1327
+				"x": 1334.659509911814,
+				"y": 1326.0486414411694
 			},
 			"data": {
 				"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
@@ -875,7 +875,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1335,8 +1335,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1292.9644240057871,
-		"y": -1065.1693315792318,
+		"x": -445.9644240057869,
+		"y": -728.1693315792318,
 		"zoom": 1.051128400241857
 	}
 }
