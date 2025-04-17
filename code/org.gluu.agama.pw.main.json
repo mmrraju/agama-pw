@@ -681,7 +681,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -841,8 +841,8 @@
 			"id": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
 			"type": "callNode",
 			"position": {
-				"x": 1570.3891315293552,
-				"y": 1325.0972828823387
+				"x": 1576.0972828823385,
+				"y": 1326.0486414411691
 			},
 			"data": {
 				"id": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
@@ -877,6 +877,82 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+			"type": "whenNode",
+			"position": {
+				"x": 1826.0972828823385,
+				"y": 1326.0486414411691
+			},
+			"data": {
+				"id": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+				"type": "whenNode",
+				"position": {
+					"x": 1826.0972828823385,
+					"y": 1326.0486414411691
+				},
+				"previousNodeId": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "user.empty",
+							"operator": "is not",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "If user found."
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false
+		},
+		{
+			"id": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+			"type": "logNode",
+			"position": {
+				"x": 2076.0972828823387,
+				"y": 1526.0486414411691
+			},
+			"data": {
+				"id": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+				"type": "logNode",
+				"position": {
+					"x": 2076.0972828823387,
+					"y": 1526.0486414411691
+				},
+				"previousNodeId": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"User found with e-mail % \" mailForm.mail",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "User found with e-mail "
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1332,11 +1408,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645"
+		},
+		{
+			"id": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21-whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+			"type": "default",
+			"source": "callNode-808148e0-65d2-45bb-a8f2-571a8a575d21",
+			"target": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-808148e0-65d2-45bb-a8f2-571a8a575d21"
+		},
+		{
+			"id": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a-logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+			"type": "default",
+			"source": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
+			"target": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a_success"
 		}
 	],
 	"viewport": {
-		"x": -445.9644240057869,
-		"y": -728.1693315792318,
+		"x": -1593.964424005787,
+		"y": -1088.169331579232,
 		"zoom": 1.051128400241857
 	}
 }
