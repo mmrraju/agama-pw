@@ -747,7 +747,7 @@
 						{
 							"variableTypeCheck": true,
 							"assignmentExpression": "{}",
-							"assignedVariableName": "mailUiFeedback"
+							"assignedVariableName": "mailUIFeedback"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -764,7 +764,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -827,14 +827,14 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Mail form",
-					"arguments": "mailFeedback"
+					"arguments": "mailUIFeedback"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -1275,8 +1275,8 @@
 		}
 	],
 	"viewport": {
-		"x": -628,
-		"y": -830,
+		"x": -685,
+		"y": -909,
 		"zoom": 1
 	}
 }
