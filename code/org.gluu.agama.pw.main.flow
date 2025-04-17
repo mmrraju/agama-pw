@@ -14,7 +14,7 @@ Repeat 6 times max
      // If forget password
      When credentials.forgetpassword is true
           // Forget password
-          Log "@info Forget password"
+          Log "@info Forget password portion starting"
           // Max mail input
           Repeat 3 times max
                // Assign mail form feedback 
@@ -46,5 +46,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_gemjq = {success:false, error: "Password validation failed!"}
-Finish it_gemjq
+it_pgnmf = {success:false, error: "Password validation failed!"}
+Finish it_pgnmf
