@@ -18,7 +18,7 @@ Repeat 6 times max
           // Max mail input
           max = Repeat 3 times max
                // Assign mail form feedback 
-               mailFeedback = {}
+               mailUiFeedback = {}
                // Mail form
                mailForm = RRF "mailform.ftlh" mailFeedback
      Otherwise
@@ -44,5 +44,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_hjpjy = {success:false, error: "Password validation failed!"}
-Finish it_hjpjy
+it_dhvsl = {success:false, error: "Password validation failed!"}
+Finish it_dhvsl
