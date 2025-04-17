@@ -643,7 +643,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -675,6 +675,41 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"type": "logNode",
+			"position": {
+				"x": 630,
+				"y": 1028
+			},
+			"data": {
+				"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+				"type": "logNode",
+				"position": {
+					"x": 856,
+					"y": 896
+				},
+				"previousNodeId": "whenNode-cd8f9932-9961-4283-9c95-486d04d556f7",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Forget password\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Forget password"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1054,6 +1089,25 @@
 			},
 			"sourceHandle": "source_whenNode-cd8f9932-9961-4283-9c95-486d04d556f7_continue",
 			"targetHandle": "target_callNode-570c4949-af38-4c18-a383-a5b860a319f8"
+		},
+		{
+			"id": "whenNode-cd8f9932-9961-4283-9c95-486d04d556f7-logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"type": "default",
+			"source": "whenNode-cd8f9932-9961-4283-9c95-486d04d556f7",
+			"target": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-cd8f9932-9961-4283-9c95-486d04d556f7_success"
 		}
 	],
 	"viewport": {
