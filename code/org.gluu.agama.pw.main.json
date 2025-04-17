@@ -856,7 +856,7 @@
 					"javaClassName": "",
 					"javaMethodName": "getUserEntityByMail",
 					"javaVariableName": "validationService",
-					"exceptionVariableField": "E",
+					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
 						"mailForm.mail"
