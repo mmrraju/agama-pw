@@ -15,6 +15,10 @@ Repeat 6 times max
      When credentials.forgetpassword is true
           // Forget password
           Log "@info Forget password"
+          // Assign mail form feedback 
+          mailFeedback = {}
+          // Mail form
+          mailForm = RRF "mailform.ftlh" mailFeedback
      Otherwise
           // Validate provided user credentials
           uiFeedback.succeed = Call validationService validate credentials.username credentials.password
@@ -38,5 +42,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_lpkyx = {success:false, error: "Password validation failed!"}
-Finish it_lpkyx
+it_rglie = {success:false, error: "Password validation failed!"}
+Finish it_rglie
