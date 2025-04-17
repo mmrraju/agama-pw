@@ -23,6 +23,10 @@ Repeat 6 times max
                mailForm = RRF "mailform.ftlh" mailUIFeedback
                // Check user exist or not with this mail.
                user = Call validationService getUserEntityByMail mailForm.mail
+               // If user found.
+               When user.empty is not true
+                    // User found with e-mail 
+                    Log "@info User found with e-mail % " mailForm.mail
      Otherwise
           // Validate provided user credentials
           uiFeedback.succeed = Call validationService validate credentials.username credentials.password
@@ -46,5 +50,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_pgnmf = {success:false, error: "Password validation failed!"}
-Finish it_pgnmf
+it_uoslp = {success:false, error: "Password validation failed!"}
+Finish it_uoslp
