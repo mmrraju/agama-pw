@@ -16,7 +16,7 @@ Repeat 6 times max
           // Forget password
           Log "@info Forget password"
           // Max mail input
-          max = Repeat 3 times max
+          Repeat 3 times max
                // Assign mail form feedback 
                mailUIFeedback = {}
                // Mail form
@@ -44,5 +44,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_vwtei = {success:false, error: "Password validation failed!"}
-Finish it_vwtei
+it_tozyi = {success:false, error: "Password validation failed!"}
+Finish it_tozyi
