@@ -991,6 +991,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-d4cb31d1-7d6c-44e3-9a8b-3af0bdbf0aac",
+			"type": "callNode",
+			"position": {
+				"x": 2326.0972828823387,
+				"y": 1526.0486414411691
+			},
+			"data": {
+				"id": "callNode-d4cb31d1-7d6c-44e3-9a8b-3af0bdbf0aac",
+				"type": "callNode",
+				"position": {
+					"x": 2326.0972828823387,
+					"y": 1526.0486414411691
+				},
+				"previousNodeId": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "sendEmail",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"mailForm.mail"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "OTP to verify user",
+					"asssignedVariableName": "otp"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -1504,11 +1544,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a_otherwise"
+		},
+		{
+			"id": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a-callNode-d4cb31d1-7d6c-44e3-9a8b-3af0bdbf0aac",
+			"type": "default",
+			"source": "logNode-2809b992-0ea0-45e4-a060-47355a4ca36a",
+			"target": "callNode-d4cb31d1-7d6c-44e3-9a8b-3af0bdbf0aac",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-2809b992-0ea0-45e4-a060-47355a4ca36a"
 		}
 	],
 	"viewport": {
-		"x": -1703.964424005787,
-		"y": -900.169331579232,
-		"zoom": 1.051128400241857
+		"x": -1937,
+		"y": -1268,
+		"zoom": 1
 	}
 }
