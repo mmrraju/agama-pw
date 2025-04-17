@@ -565,8 +565,8 @@
 			"type": "logNode",
 			"id": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131",
 			"position": {
-				"x": 1317,
-				"y": 913
+				"x": 1336,
+				"y": 777
 			},
 			"measured": {
 				"width": 170,
@@ -639,8 +639,8 @@
 			"type": "finishNode",
 			"id": "finishNode-91a948c1-0158-49cd-9051-fac022e1f04b",
 			"position": {
-				"x": 1608,
-				"y": 921
+				"x": 1598,
+				"y": 775
 			},
 			"measured": {
 				"width": 170,
@@ -653,8 +653,8 @@
 			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
 			"type": "logNode",
 			"position": {
-				"x": 630,
-				"y": 1028
+				"x": 697,
+				"y": 1068
 			},
 			"data": {
 				"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
@@ -718,6 +718,81 @@
 					"hasComment": true,
 					"comment": "Validate provided user credentials",
 					"asssignedVariableName": "uiFeedback.succeed"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"type": "assignmentNode",
+			"position": {
+				"x": 935,
+				"y": 1079
+			},
+			"data": {
+				"id": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+				"type": "assignmentNode",
+				"position": {
+					"x": 947,
+					"y": 1068
+				},
+				"previousNodeId": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "mailFeedback"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Assign mail form feedback "
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+			"type": "rrfNode",
+			"position": {
+				"x": 1181,
+				"y": 1079
+			},
+			"data": {
+				"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+				"type": "rrfNode",
+				"position": {
+					"x": 947,
+					"y": 1068
+				},
+				"previousNodeId": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "mailform.ftlh",
+					"asssignedVariableName": "mailForm",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Mail form",
+					"arguments": "mailFeedback"
 				}
 			},
 			"measured": {
@@ -1106,11 +1181,49 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__callNode-910b51a9-b4af-43db-a86b-3d3848d1f87dsource_callNode-910b51a9-b4af-43db-a86b-3d3848d1f87d-whenNode-6bb9b4c5-92d3-4257-8f41-1557fb24648etarget_whenNode-6bb9b4c5-92d3-4257-8f41-1557fb24648e"
+		},
+		{
+			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4-assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"type": "default",
+			"source": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"target": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4"
+		},
+		{
+			"id": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f-rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+			"type": "default",
+			"source": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"target": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"targetHandle": "target_rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645"
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -703,
+		"y": -754,
 		"zoom": 1
 	}
 }
