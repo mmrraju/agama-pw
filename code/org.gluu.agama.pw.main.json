@@ -731,8 +731,8 @@
 			"id": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
 			"type": "assignmentNode",
 			"position": {
-				"x": 1268,
-				"y": 1079
+				"x": 1093,
+				"y": 1328
 			},
 			"data": {
 				"id": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
@@ -758,7 +758,7 @@
 					"hasComment": true,
 					"comment": "Assign mail form feedback "
 				},
-				"branching": "continue"
+				"branching": "repeat"
 			},
 			"measured": {
 				"width": 170,
@@ -798,15 +798,15 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
 			"type": "rrfNode",
 			"position": {
-				"x": 1508,
-				"y": 1080
+				"x": 1328,
+				"y": 1327
 			},
 			"data": {
 				"id": "rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645",
@@ -834,7 +834,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -1256,11 +1256,11 @@
 			"sourceHandle": "source_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4"
 		},
 		{
-			"id": "repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239-assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
-			"type": "default",
 			"source": "repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
+			"sourceHandle": "source_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239_repeat",
 			"target": "assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
-			"label": "continue",
+			"targetHandle": "target_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
+			"label": "repeat",
 			"labelBgPadding": [
 				8,
 				4
@@ -1271,8 +1271,7 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"sourceHandle": "source_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239_continue",
-			"targetHandle": "target_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f"
+			"id": "xy-edge__repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239source_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239_repeat-assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0ftarget_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f"
 		}
 	],
 	"viewport": {
