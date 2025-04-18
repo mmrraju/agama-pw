@@ -15,7 +15,7 @@ Repeat 6 times max
      When credentials.forgetpassword is true
           // Forget password start
           Log "@info Forget password portion starting"
-          // Max mail input
+          // Max 3 times repeat
           Repeat 3 times max
                // Assign mail form feedback 
                mailUIFeedback = {}
@@ -55,5 +55,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_oeacd = {success:false, error: "Password validation failed!"}
-Finish it_oeacd
+it_sswcr = {success:false, error: "Password validation failed!"}
+Finish it_sswcr
