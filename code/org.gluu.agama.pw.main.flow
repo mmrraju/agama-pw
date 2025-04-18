@@ -37,6 +37,8 @@ Repeat 6 times max
                          otpFormData = RRF "otp.ftlh" otpFormFeedback
                          // If OTP match
                          When otpFormData.passcode is otp
+                              // OTP matches
+                              Log "@info OTP matches"
                Otherwise
                     // User not found
                     mailUIFeedback.errorMessage = "User not found"
@@ -63,5 +65,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_irqrh = {success:false, error: "Password validation failed!"}
-Finish it_irqrh
+it_querl = {success:false, error: "Password validation failed!"}
+Finish it_querl
