@@ -674,14 +674,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Forget password"
+					"comment": "Forget password start"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1031,7 +1031,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1566,8 +1566,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1937,
-		"y": -1268,
+		"x": -301,
+		"y": -646,
 		"zoom": 1
 	}
 }
