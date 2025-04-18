@@ -1442,7 +1442,42 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "logNode-cd365ce8-b9e0-4790-9a97-fb429da29d43",
+			"type": "logNode",
+			"position": {
+				"x": 5076.097282882339,
+				"y": 2426.048641441169
+			},
+			"data": {
+				"id": "logNode-cd365ce8-b9e0-4790-9a97-fb429da29d43",
+				"type": "logNode",
+				"position": {
+					"x": 5076.097282882339,
+					"y": 2426.048641441169
+				},
+				"previousNodeId": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Password policy match\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password policy match"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2183,11 +2218,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb_otherwise"
+		},
+		{
+			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb-logNode-cd365ce8-b9e0-4790-9a97-fb429da29d43",
+			"type": "default",
+			"source": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+			"target": "logNode-cd365ce8-b9e0-4790-9a97-fb429da29d43",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb_success"
 		}
 	],
 	"viewport": {
-		"x": -4781.931616659584,
-		"y": -1881.989775081292,
+		"x": -5015.931616659584,
+		"y": -2045.989775081292,
 		"zoom": 1.0281138266560665
 	}
 }
