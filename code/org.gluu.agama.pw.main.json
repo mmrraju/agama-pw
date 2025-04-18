@@ -1613,10 +1613,11 @@
 					"javaClassName": "",
 					"javaMethodName": "updateUserPassword",
 					"javaVariableName": "validationService",
-					"exceptionVariableField": "",
+					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"arguments": [
-						"passFormData.userPassword"
+						"passFormData.userPassword",
+						"mailForm.mail"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -1624,7 +1625,8 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Update user password"
+					"comment": "Update user password",
+					"asssignedVariableName": "inum"
 				}
 			},
 			"measured": {
@@ -1632,6 +1634,38 @@
 				"height": 124
 			},
 			"selected": true
+		},
+		{
+			"id": "assignmentNode-1bd84113-8d0a-4807-9b92-67789e89ad9f",
+			"type": "assignmentNode",
+			"position": {
+				"x": 6076.097282882339,
+				"y": 2626.048641441169
+			},
+			"data": {
+				"id": "assignmentNode-1bd84113-8d0a-4807-9b92-67789e89ad9f",
+				"type": "assignmentNode",
+				"position": {
+					"x": 6076.097282882339,
+					"y": 2626.048641441169
+				},
+				"previousNodeId": "callNode-09e08a11-d072-4236-913a-cf6fe1b9fc3d",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2467,11 +2501,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-dc77d164-14d1-425a-bcbb-433825d733eb"
+		},
+		{
+			"id": "callNode-09e08a11-d072-4236-913a-cf6fe1b9fc3d-assignmentNode-1bd84113-8d0a-4807-9b92-67789e89ad9f",
+			"type": "default",
+			"source": "callNode-09e08a11-d072-4236-913a-cf6fe1b9fc3d",
+			"target": "assignmentNode-1bd84113-8d0a-4807-9b92-67789e89ad9f",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-09e08a11-d072-4236-913a-cf6fe1b9fc3d"
 		}
 	],
 	"viewport": {
-		"x": -4624.678341689488,
-		"y": -1839.0346328506303,
+		"x": -4806.678341689488,
+		"y": -2027.0346328506303,
 		"zoom": 0.8705505632961241
 	}
 }
