@@ -39,6 +39,8 @@ Repeat 6 times max
                          When otpFormData.passcode is otp
                               // OTP matches
                               Log "@info OTP matches"
+                              // Assign variable Re-set Password Form Feedback 
+                              resetPassFormFeedback = {}
                Otherwise
                     // User not found
                     mailUIFeedback.errorMessage = "User not found"
@@ -65,5 +67,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_querl = {success:false, error: "Password validation failed!"}
-Finish it_querl
+it_pbfmw = {success:false, error: "Password validation failed!"}
+Finish it_pbfmw
