@@ -41,6 +41,10 @@ Repeat 6 times max
                               Log "@info OTP matches"
                               // Assign variable Re-set Password Form Feedback 
                               resetPassFormFeedback = {}
+                              // Max 3 times repeat
+                              Repeat 3 times max
+                                   // Re-set Password Form
+                                   passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
                Otherwise
                     // User not found
                     mailUIFeedback.errorMessage = "User not found"
@@ -67,5 +71,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_xnyty = {success:false, error: "Password validation failed!"}
-Finish it_xnyty
+it_artwx = {success:false, error: "Password validation failed!"}
+Finish it_artwx
