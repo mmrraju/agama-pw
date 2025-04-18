@@ -57,6 +57,10 @@ Repeat 6 times max
                                              Log "@info Password and confirmPassword match"
                                              // Update user password
                                              inum | E = Call validationService updateUserPassword passFormData.userPassword mailForm.mail
+                                             // If password update successfully
+                                             When inum.empty is not true
+                                                  // Password update successfully
+                                                  Log "@info Password update successfully"
                                         Otherwise
                                              // Password doesn't match
                                              resetPassFormFeedback.errorMessage = "Password doesn't match"
@@ -89,5 +93,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_lxdzt = {success:false, error: "Password validation failed!"}
-Finish it_lxdzt
+it_blzge = {success:false, error: "Password validation failed!"}
+Finish it_blzge
