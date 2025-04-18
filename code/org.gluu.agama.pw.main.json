@@ -681,7 +681,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -791,14 +791,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Max mail input"
+					"comment": "Max 3 times repeat"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1566,8 +1566,8 @@
 		}
 	],
 	"viewport": {
-		"x": -301,
-		"y": -646,
+		"x": -511,
+		"y": -808,
 		"zoom": 1
 	}
 }
