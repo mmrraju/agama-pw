@@ -1675,7 +1675,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1711,6 +1711,40 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-5749e965-9e70-45ec-aab8-ba3d90bf213b",
+			"type": "logNode",
+			"position": {
+				"x": 6326.097282882339,
+				"y": 2376.048641441169
+			},
+			"data": {
+				"id": "logNode-5749e965-9e70-45ec-aab8-ba3d90bf213b",
+				"type": "logNode",
+				"position": {
+					"x": 6326.097282882339,
+					"y": 2376.048641441169
+				},
+				"previousNodeId": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170",
+				"branching": "otherwise",
+				"agamaData": {
+					"logMessage": "\"Password not updated. Error : %\" E",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password not updated"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2584,11 +2618,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-f4304318-19a2-4e39-bf8e-5c200a544170_success"
+		},
+		{
+			"id": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170-logNode-5749e965-9e70-45ec-aab8-ba3d90bf213b",
+			"type": "default",
+			"source": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170",
+			"target": "logNode-5749e965-9e70-45ec-aab8-ba3d90bf213b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-f4304318-19a2-4e39-bf8e-5c200a544170_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -5781,
-		"y": -2440,
+		"x": -5775,
+		"y": -2296,
 		"zoom": 1
 	}
 }
