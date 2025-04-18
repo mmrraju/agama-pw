@@ -1214,6 +1214,44 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-d903c913-618e-4f0b-95df-753080970f71",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3826.0972828823387,
+				"y": 1976.0486414411691
+			},
+			"data": {
+				"id": "assignmentNode-d903c913-618e-4f0b-95df-753080970f71",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3826.0972828823387,
+					"y": 1976.0486414411691
+				},
+				"previousNodeId": "logNode-381cfeb3-21c8-4d32-ab4a-5ed4fe0beddd",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "resetPassFormFeedback"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Assign variable Re-set Password Form Feedback "
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -1841,11 +1879,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-a224a3d7-2094-4dfc-b5fe-66a374a8de6f_success"
+		},
+		{
+			"id": "logNode-381cfeb3-21c8-4d32-ab4a-5ed4fe0beddd-assignmentNode-d903c913-618e-4f0b-95df-753080970f71",
+			"type": "default",
+			"source": "logNode-381cfeb3-21c8-4d32-ab4a-5ed4fe0beddd",
+			"target": "assignmentNode-d903c913-618e-4f0b-95df-753080970f71",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-381cfeb3-21c8-4d32-ab4a-5ed4fe0beddd"
 		}
 	],
 	"viewport": {
-		"x": -4230.989993627216,
-		"y": -2219.1130859409022,
-		"zoom": 1.3566043274476731
+		"x": -3578.0965703704696,
+		"y": -1670.4352185562539,
+		"zoom": 1.0281138266560663
 	}
 }
