@@ -61,6 +61,9 @@ Repeat 6 times max
                                              When inum is not null
                                                   // Password update successfully
                                                   Log "@info Password update successfully"
+                                             Otherwise
+                                                  // Password not updated
+                                                  Log "@info Password not updated. Error : %" E
                                         Otherwise
                                              // Password doesn't match
                                              resetPassFormFeedback.errorMessage = "Password doesn't match"
@@ -93,5 +96,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_dyqjh = {success:false, error: "Password validation failed!"}
-Finish it_dyqjh
+it_rrhvp = {success:false, error: "Password validation failed!"}
+Finish it_rrhvp
