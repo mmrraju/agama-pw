@@ -13,7 +13,7 @@ Repeat 6 times max
      credentials = RRF "login-basic.ftlh" uiFeedback
      // If forget password
      When credentials.forgetpassword is true
-          // Forget password
+          // Forget password start
           Log "@info Forget password portion starting"
           // Max mail input
           Repeat 3 times max
@@ -55,5 +55,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_imsab = {success:false, error: "Password validation failed!"}
-Finish it_imsab
+it_oeacd = {success:false, error: "Password validation failed!"}
+Finish it_oeacd
