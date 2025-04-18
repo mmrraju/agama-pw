@@ -51,6 +51,15 @@ Repeat 6 times max
                                    When isPassPolicyMatch is true
                                         // Password policy match
                                         Log "@info Password policy match"
+                                        // if password match
+                                        When passFormData.userPassword is passFormData.confirmPassword
+                                             // Password and confirmPassword match
+                                             Log "@info Password and confirmPassword match"
+                                             // Update user password
+                                             Call validationService updateUserPassword passFormData.userPassword
+                                        Otherwise
+                                             // Password doesn't match
+                                             resetPassFormFeedback.errorMessage = "Password doesn't match"
                                    Otherwise
                                         // Password Policy
                                         resetPassFormFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
@@ -80,5 +89,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_aklpo = {success:false, error: "Password validation failed!"}
-Finish it_aklpo
+it_yeikz = {success:false, error: "Password validation failed!"}
+Finish it_yeikz
