@@ -1361,6 +1361,87 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+			"type": "whenNode",
+			"position": {
+				"x": 4826.097282882339,
+				"y": 2226.048641441169
+			},
+			"data": {
+				"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+				"type": "whenNode",
+				"position": {
+					"x": 4826.097282882339,
+					"y": 2226.048641441169
+				},
+				"previousNodeId": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "isPassPolicyMatch",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password policy Match"
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-ff04348d-2395-403a-a3a6-8232968a9376",
+			"type": "assignmentNode",
+			"position": {
+				"x": 5076.097282882339,
+				"y": 1976.048641441169
+			},
+			"data": {
+				"id": "assignmentNode-ff04348d-2395-403a-a3a6-8232968a9376",
+				"type": "assignmentNode",
+				"position": {
+					"x": 5076.097282882339,
+					"y": 1976.048641441169
+				},
+				"previousNodeId": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+				"branching": "otherwise",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Password must be at least 6 characters long and contain at least one special character\"",
+							"assignedVariableName": "resetPassFormFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password Policy"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -2064,11 +2145,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-1a5d1197-726e-42eb-937f-bdc1cccf7de8"
+		},
+		{
+			"id": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb-whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+			"type": "default",
+			"source": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+			"target": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb"
+		},
+		{
+			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb-assignmentNode-ff04348d-2395-403a-a3a6-8232968a9376",
+			"type": "default",
+			"source": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
+			"target": "assignmentNode-ff04348d-2395-403a-a3a6-8232968a9376",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -5982.053827143742,
-		"y": -2990.3321826464335,
-		"zoom": 1.4339552480158273
+		"x": -4781.931616659584,
+		"y": -1881.989775081292,
+		"zoom": 1.0281138266560665
 	}
 }
