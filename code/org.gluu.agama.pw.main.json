@@ -1656,9 +1656,9 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "inum.empty",
+							"variable": "inum",
 							"operator": "is not",
-							"dataValue": "true",
+							"dataValue": "null",
 							"combinator": "none"
 						}
 					],
@@ -1675,7 +1675,8 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-8d321d84-63f2-41fa-ab95-acde78a7f23d",
@@ -1709,7 +1710,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2586,8 +2587,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5483,
-		"y": -2288,
+		"x": -5781,
+		"y": -2440,
 		"zoom": 1
 	}
 }
