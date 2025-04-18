@@ -1321,6 +1321,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+			"type": "callNode",
+			"position": {
+				"x": 4576.097282882339,
+				"y": 2226.048641441169
+			},
+			"data": {
+				"id": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+				"type": "callNode",
+				"position": {
+					"x": 4576.097282882339,
+					"y": 2226.048641441169
+				},
+				"previousNodeId": "rrfNode-1a5d1197-726e-42eb-937f-bdc1cccf7de8",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "passwordPolicyMatch",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"passFormData.userPassword"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check password policy",
+					"asssignedVariableName": "isPassPolicyMatch"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -2005,11 +2045,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-49ad8d3c-2749-40f8-909c-8579078867d8_repeat"
+		},
+		{
+			"id": "rrfNode-1a5d1197-726e-42eb-937f-bdc1cccf7de8-callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+			"type": "default",
+			"source": "rrfNode-1a5d1197-726e-42eb-937f-bdc1cccf7de8",
+			"target": "callNode-1d22cd54-3497-451f-83c3-b3d9aa8203cb",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-1a5d1197-726e-42eb-937f-bdc1cccf7de8"
 		}
 	],
 	"viewport": {
-		"x": -5878.053827143742,
-		"y": -2971.3321826464335,
+		"x": -5982.053827143742,
+		"y": -2990.3321826464335,
 		"zoom": 1.4339552480158273
 	}
 }
