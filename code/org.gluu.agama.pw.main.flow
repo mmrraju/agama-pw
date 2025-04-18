@@ -45,6 +45,8 @@ Repeat 6 times max
                               Repeat 3 times max
                                    // Re-set Password Form
                                    passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
+                                   // Check password policy
+                                   isPassPolicyMatch = Call validationService passwordPolicyMatch passFormData.userPassword
                Otherwise
                     // User not found
                     mailUIFeedback.errorMessage = "User not found"
@@ -71,5 +73,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_artwx = {success:false, error: "Password validation failed!"}
-Finish it_artwx
+it_qatke = {success:false, error: "Password validation failed!"}
+Finish it_qatke
