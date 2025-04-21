@@ -16,9 +16,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.regex.Pattern;
 
+import org.gluu.agama.pw.ResetService;
 import org.gluu.agama.pw.jans.EmailTemplate;
 
-public class JansResetService {
+public class JansResetService extends ResetService{
 
     private static final String MAIL = "mail";
     private static final String UID = "uid";
