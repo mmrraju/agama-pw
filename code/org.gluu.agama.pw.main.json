@@ -795,7 +795,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1874,7 +1874,7 @@
 						{
 							"variableTypeCheck": true,
 							"assignmentExpression": "\"OTP doesn't match\"",
-							"assignedVariableName": "otpFormData.errorMessage"
+							"assignedVariableName": "otpFormFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1890,7 +1890,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2862,8 +2862,8 @@
 		}
 	],
 	"viewport": {
-		"x": -327.2442728096863,
-		"y": -736.3536869866034,
+		"x": -2156.244272809686,
+		"y": -1088.3536869866034,
 		"zoom": 0.8467453123625276
 	}
 }
