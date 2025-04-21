@@ -54,11 +54,11 @@ Repeat 6 times max
                                         // Password policy match
                                         Log "@info Password policy match"
                                         // if password match
-                                        When passFormData.userPassword is passFormData.confirmPassword
+                                        When passFormData.password is passFormData.confirmPassword
                                              // Password and confirmPassword match
                                              Log "@info Password and confirmPassword match"
                                              // Update user password
-                                             inum | E = Call resetService updateUserPassword passFormData.userPassword mailForm.mail
+                                             inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
                                              // If password update successfully
                                              When inum is not null
                                                   // Password update successfully
@@ -105,5 +105,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_owebe = {success:false, error: "Password validation failed!"}
-Finish it_owebe
+it_fcohs = {success:false, error: "Password validation failed!"}
+Finish it_fcohs
