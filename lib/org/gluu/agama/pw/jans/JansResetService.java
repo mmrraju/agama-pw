@@ -118,7 +118,12 @@ public class JansResetService extends ResetService{
     private SmtpConfiguration getSmtpConfiguration() {
         ConfigurationService configurationService = CdiUtil.bean(ConfigurationService.class);
         SmtpConfiguration smtpConfiguration = configurationService.getConfiguration().getSmtpConfiguration();
-        LogUtils.log("Your smtp configuration is %", smtpConfiguration);
+        if (smtpConfiguration.getFromEmailAddress() == null || smtpConfiguration.getFromEmailAddress().isEmpty()) {
+            LogUtils.log("Your smtp configuration not found, Please configure SMTP");
+        } else {
+            LogUtils.log("Your smtp configuration found");
+        }
+        
         return smtpConfiguration;
 
     } 
