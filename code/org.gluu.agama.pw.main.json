@@ -596,9 +596,9 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "credentials.forgetpassword",
+							"variable": "credentials.forgetpass",
 							"operator": "is",
-							"dataValue": "true",
+							"dataValue": "\"continue\"",
 							"combinator": "none"
 						}
 					],
@@ -615,7 +615,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1633,7 +1633,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170",
@@ -2804,8 +2804,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4945,
-		"y": -2254,
+		"x": -204,
+		"y": -513,
 		"zoom": 1
 	}
 }
