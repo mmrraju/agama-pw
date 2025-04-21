@@ -1031,7 +1031,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-a5e9fbd2-264d-4942-8f80-214c8bb2bc4a",
@@ -1341,7 +1341,7 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "passwordPolicyMatch",
-					"javaVariableName": "validationService",
+					"javaVariableName": "resetService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
@@ -1361,7 +1361,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
@@ -2804,8 +2804,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1528,
-		"y": -1071,
+		"x": -3883,
+		"y": -1895,
 		"zoom": 1
 	}
 }
