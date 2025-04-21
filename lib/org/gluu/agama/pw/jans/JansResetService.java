@@ -1,27 +1,14 @@
 package org.gluu.agama.pw.jans;
 
-import io.jans.agama.engine.service.FlowService;
+
 import io.jans.as.common.model.common.User;
-import io.jans.as.server.service.AuthenticationService;
 import io.jans.as.server.service.UserService;
-import io.jans.orm.model.base.CustomObjectAttribute;
-import io.jans.service.CacheService;
 import io.jans.service.cdi.util.CdiUtil;
-import org.gluu.agama.pw.PasswordService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-// Mostafejur Rahman
-import io.jans.as.common.service.common.EncryptionService;
 import io.jans.orm.exception.operation.EntryNotFoundException;
 import io.jans.service.MailService;
 import io.jans.model.SmtpConfiguration;
 import io.jans.util.StringHelper;
 import io.jans.agama.engine.script.LogUtils;
-import java.io.IOException;
 import io.jans.as.common.service.common.ConfigurationService;
 import java.security.SecureRandom;
 import java.util.*;
