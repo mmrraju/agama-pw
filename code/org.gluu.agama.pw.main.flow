@@ -30,7 +30,7 @@ Repeat 6 times max
                     // User found with e-mail 
                     Log "@info User found with e-mail % " mailForm.mail
                     // OTP to verify user
-                    otp = Call validationService sendEmail mailForm.mail
+                    otp = Call resetService sendEmail mailForm.mail
                     // OTP form feedback
                     otpFormFeedback = {}
                     // Max 3 times repeat 
@@ -102,5 +102,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_etebc = {success:false, error: "Password validation failed!"}
-Finish it_etebc
+it_dzmuf = {success:false, error: "Password validation failed!"}
+Finish it_dzmuf
