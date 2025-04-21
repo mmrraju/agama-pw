@@ -23,6 +23,12 @@
 		  <p class="leading-normal">Reset your Password
 		  </p>
 		</div>
+		[#if errorMessage?has_content]
+		  <div role="alert" align="center" class="alert alert-danger mt-3 error">
+			<p>${errorMessage} 
+			</p>
+		  </div>
+		[/#if]
 		<form method="post" class="my-8">
 		  <div class="relative mb-2">
 			<label for="password" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
