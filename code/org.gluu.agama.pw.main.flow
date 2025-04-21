@@ -76,6 +76,9 @@ Repeat 6 times max
                                    Otherwise
                                         // Password Policy
                                         resetPassFormFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
+                         Otherwise
+                              // OTP doesn't match
+                              otpFormData.errorMessage = "OTP doesn't match"
                Otherwise
                     // User not found
                     mailUIFeedback.errorMessage = "User not found"
@@ -102,5 +105,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_pxnuj = {success:false, error: "Password validation failed!"}
-Finish it_pxnuj
+it_wvunc = {success:false, error: "Password validation failed!"}
+Finish it_wvunc
