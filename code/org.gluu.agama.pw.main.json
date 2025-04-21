@@ -1361,7 +1361,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
@@ -1612,7 +1612,7 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "updateUserPassword",
-					"javaVariableName": "validationService",
+					"javaVariableName": "resetService",
 					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"arguments": [
@@ -1633,7 +1633,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170",
@@ -2804,8 +2804,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3883,
-		"y": -1895,
+		"x": -4945,
+		"y": -2254,
 		"zoom": 1
 	}
 }
