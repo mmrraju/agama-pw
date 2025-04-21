@@ -48,7 +48,7 @@ Repeat 6 times max
                                    // Re-set Password Form
                                    passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
                                    // Check password policy
-                                   isPassPolicyMatch = Call validationService passwordPolicyMatch passFormData.userPassword
+                                   isPassPolicyMatch = Call resetService passwordPolicyMatch passFormData.userPassword
                                    // Password policy Match
                                    When isPassPolicyMatch is true
                                         // Password policy match
@@ -102,5 +102,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_dzmuf = {success:false, error: "Password validation failed!"}
-Finish it_dzmuf
+it_qwpzl = {success:false, error: "Password validation failed!"}
+Finish it_qwpzl
