@@ -20,7 +20,7 @@
 	  <div class="separator">
 	  </div>
 	  <p class="message">
-		You've successfully Registered on Jansen!!!
+		You've successfully Re-set your password!!!
 		<br>
 	  </p>
 	  <form method="post" id="myForm" class="my-8">
