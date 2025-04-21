@@ -12,7 +12,7 @@ Repeat 6 times max
      // Retrieve user credentials from UI.
      credentials = RRF "login-basic.ftlh" uiFeedback
      // If forget password
-     When credentials.forgetpassword is true
+     When credentials.forgetpass is "continue"
           // Forget password start
           Log "@info Forget password portion starting"
           // Initiate reset service
@@ -102,5 +102,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_bigaq = {success:false, error: "Password validation failed!"}
-Finish it_bigaq
+it_pxnuj = {success:false, error: "Password validation failed!"}
+Finish it_pxnuj
