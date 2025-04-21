@@ -653,8 +653,8 @@
 			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
 			"type": "logNode",
 			"position": {
-				"x": 697,
-				"y": 1068
+				"x": 453,
+				"y": 1055
 			},
 			"data": {
 				"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
@@ -781,7 +781,7 @@
 					"x": 947,
 					"y": 1068
 				},
-				"previousNodeId": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+				"previousNodeId": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
 					"maxIteration": "3",
@@ -1781,6 +1781,45 @@
 			"selected": false
 		},
 		{
+			"id": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+			"type": "callNode",
+			"position": {
+				"x": 711,
+				"y": 1065
+			},
+			"data": {
+				"id": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+				"type": "callNode",
+				"position": {
+					"x": 947,
+					"y": 1068
+				},
+				"previousNodeId": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.pw.ResetService",
+					"javaMethodName": "getInstance",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Initiate reset service",
+					"asssignedVariableName": "resetService"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
+		},
+		{
 			"id": "finishNode-0d32434f-3e96-4ed5-bbf7-880cfdced777",
 			"type": "finishNode",
 			"position": {
@@ -1812,7 +1851,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -2212,25 +2251,6 @@
 			},
 			"sourceHandle": "source_assignmentNode-23c7850e-ee0a-4324-82f5-16ca592e4b0f",
 			"targetHandle": "target_rrfNode-346c3b39-9fe5-48c9-b241-31b2ac0fd645"
-		},
-		{
-			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4-repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
-			"type": "default",
-			"source": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
-			"target": "repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4"
 		},
 		{
 			"source": "repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
@@ -2743,11 +2763,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-51ffd2cb-b9de-4950-baea-677a78b6008c"
+		},
+		{
+			"id": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4-callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+			"type": "default",
+			"source": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"target": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4"
+		},
+		{
+			"id": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e-repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
+			"type": "default",
+			"source": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+			"target": "repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
+			"targetHandle": "target_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239"
 		}
 	],
 	"viewport": {
-		"x": -6129,
-		"y": -2431,
+		"x": -229,
+		"y": -627,
 		"zoom": 1
 	}
 }
