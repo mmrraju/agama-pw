@@ -855,7 +855,7 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "getUserEntityByMail",
-					"javaVariableName": "validationService",
+					"javaVariableName": "resetService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
@@ -875,7 +875,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1816,7 +1816,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2804,8 +2804,8 @@
 		}
 	],
 	"viewport": {
-		"x": -229,
-		"y": -627,
+		"x": -831,
+		"y": -1068,
 		"zoom": 1
 	}
 }
