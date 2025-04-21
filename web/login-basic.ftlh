@@ -54,11 +54,11 @@
 				Submit
 			  </button>
 			</div>
-			  <div class="text-sm flex justify-center items-center">
-				<button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
-				  Forget Password
-				</button>
-			  </div>			
+			<div class="text-sm flex justify-center items-center">
+			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient" name="forgetpass" value="continue">
+				Forget Password
+			  </button>
+			</div>
 		  </div>
 		</form>
 	  </div>
