@@ -53,6 +53,9 @@
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
 				Submit
 			  </button>
+			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
+				Forget Password
+			  </button>
 			</div>
 		  </div>
 		</form>
