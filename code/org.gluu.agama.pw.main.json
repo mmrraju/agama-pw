@@ -615,7 +615,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1852,6 +1852,45 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "assignmentNode-7e255a63-f2ff-419c-93c8-db65274c5570",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3576.0972828823387,
+				"y": 1526.0486414411691
+			},
+			"data": {
+				"id": "assignmentNode-7e255a63-f2ff-419c-93c8-db65274c5570",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3576.0972828823387,
+					"y": 1526.0486414411691
+				},
+				"previousNodeId": "whenNode-a224a3d7-2094-4dfc-b5fe-66a374a8de6f",
+				"branching": "otherwise",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"OTP doesn't match\"",
+							"assignedVariableName": "otpFormData.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "OTP doesn't match"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2801,11 +2840,30 @@
 			},
 			"sourceHandle": "source_callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
 			"targetHandle": "target_repeatNode-39e100f2-5708-448c-a6a4-5917ded2c239"
+		},
+		{
+			"id": "whenNode-a224a3d7-2094-4dfc-b5fe-66a374a8de6f-assignmentNode-7e255a63-f2ff-419c-93c8-db65274c5570",
+			"type": "default",
+			"source": "whenNode-a224a3d7-2094-4dfc-b5fe-66a374a8de6f",
+			"target": "assignmentNode-7e255a63-f2ff-419c-93c8-db65274c5570",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-a224a3d7-2094-4dfc-b5fe-66a374a8de6f_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -204,
-		"y": -513,
+		"x": -3221,
+		"y": -1395,
 		"zoom": 1
 	}
 }
