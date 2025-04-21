@@ -24,10 +24,10 @@
 		  </p>
 		</div>
 		[#if errorMessage?has_content]
-		  <div role="alert" align="center" class="alert alert-danger mt-3 error">
-			<p>${errorMessage} 
-			</p>
-		  </div>
+		<div role="alert" align="center" class="alert alert-danger mt-3 error">
+		  <p>${errorMessage} 
+		  </p>
+		</div>
 		[/#if]
 		<form method="post" class="my-8">
 		  <div class="relative mb-2">
@@ -53,7 +53,21 @@
 	  </div>
 	</div>
   
+    
 </body>
-
+<style>
+	.required {
+	  color: red;
+	}
+	.error-message {
+	  color: red;
+	  font-size: 13px;
+	  margin-top: 5px;
+	}
+	.error{
+	  font-weight: bold;
+	  color: red;
+	}
+  </style>
 
 </html>
