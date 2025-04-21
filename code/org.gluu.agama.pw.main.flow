@@ -17,10 +17,10 @@ Repeat 6 times max
           Log "@info Forget password portion starting"
           // Initiate reset service
           resetService = Call org.gluu.agama.pw.ResetService#getInstance 
+          // Assign mail form feedback 
+          mailUIFeedback = {}
           // Max 3 times repeat
           Repeat 3 times max
-               // Assign mail form feedback 
-               mailUIFeedback = {}
                // Mail form
                mailForm = RRF "mailform.ftlh" mailUIFeedback
                // Check user exist or not with this mail.
@@ -105,5 +105,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_fcohs = {success:false, error: "Password validation failed!"}
-Finish it_fcohs
+it_bvahc = {success:false, error: "Password validation failed!"}
+Finish it_bvahc
