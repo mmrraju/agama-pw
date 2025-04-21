@@ -22,8 +22,7 @@
 		  <span class="text-2xl font-semi-bold leading-normal">Reset Password</span>
 		  <p class="leading-normal">
 			Enter the email address associated with your 
-			<br>account and we'll send you the
-			reset password link
+			<br>account and we'll send a varification code.
 		  </p>
 		</div>
 		<form method="post" class="my-8">
@@ -31,7 +30,7 @@
 			<label for="email" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 			  Email
 			</label>
-			<input type="email" id="email" name="email" autofocus="" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
+			<input type="email" id="mail" name="mail" autofocus="" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 		  </div>
 		  <div class="space-y-9">
 			<div>
