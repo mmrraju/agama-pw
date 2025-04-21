@@ -1361,7 +1361,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-29f61da7-20d0-4a20-b942-c277c4e58cbb",
@@ -1500,7 +1500,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "passFormData.userPassword",
+							"variable": "passFormData.password",
 							"operator": "is",
 							"dataValue": "passFormData.confirmPassword",
 							"combinator": "none"
@@ -1616,7 +1616,7 @@
 					"exceptionVariableField": "E",
 					"callType": "Call method on instance",
 					"arguments": [
-						"passFormData.userPassword",
+						"passFormData.password",
 						"mailForm.mail"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -1633,7 +1633,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-f4304318-19a2-4e39-bf8e-5c200a544170",
@@ -2862,8 +2862,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3845,
-		"y": -1925,
+		"x": -5077,
+		"y": -2170,
 		"zoom": 1
 	}
 }
