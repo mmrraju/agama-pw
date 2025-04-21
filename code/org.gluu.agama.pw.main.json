@@ -875,7 +875,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1011,7 +1011,7 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "sendEmail",
-					"javaVariableName": "validationService",
+					"javaVariableName": "resetService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
@@ -1031,7 +1031,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-a5e9fbd2-264d-4942-8f80-214c8bb2bc4a",
@@ -2804,8 +2804,8 @@
 		}
 	],
 	"viewport": {
-		"x": -831,
-		"y": -1068,
+		"x": -1528,
+		"y": -1071,
 		"zoom": 1
 	}
 }
