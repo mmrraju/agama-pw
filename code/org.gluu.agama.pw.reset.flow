@@ -1,2 +1,6 @@
 Flow org.gluu.agama.pw.reset
      Basepath ""
+// Initiate reset service
+resetService = Call org.gluu.agama.pw.ResetService#getInstance 
+// Assign mail form feedback 
+mailUIFeedback = {}
