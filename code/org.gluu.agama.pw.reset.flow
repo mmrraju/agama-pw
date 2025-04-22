@@ -4,3 +4,5 @@ Flow org.gluu.agama.pw.reset
 resetService = Call org.gluu.agama.pw.ResetService#getInstance 
 // Assign mail form feedback 
 mailUIFeedback = {}
+// Max 3 times repeat
+Repeat 3 times max
