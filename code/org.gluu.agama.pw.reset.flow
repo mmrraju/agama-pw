@@ -40,6 +40,15 @@ Repeat 3 times max
                               Log "@info Password policy match"
                               // Update user password
                               inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
+                              // If password update successfully
+                              When inum is not null
+                                   // Password update successfully
+                                   Log "@info Password update successfully"
+                                   // acknowledgement
+                                   acknowledgement = RRF "acknowledgement.ftlh" 
+                              Otherwise
+                                   // Password not updated
+                                   Log "@info Password not updated. Error : %" E
                          Otherwise
                               // Password doesn't match
                               resetPassFormFeedback.errorMessage = "Password doesn't match"
