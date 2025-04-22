@@ -9,6 +9,8 @@ uiFeedback = {}
 validationService = Call org.gluu.agama.pw.PasswordService#getInstance conf
 // Iterate x times max
 Repeat 6 times max
+     // If Password Rest is True
+     When config.enablePasswordRest is true
      // Retrieve user credentials from UI.
      credentials = RRF "login-basic.ftlh" uiFeedback
      // If forget password
@@ -105,5 +107,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_uzcrh = {success:false, error: "Password validation failed!"}
-Finish it_uzcrh
+it_rmcxz = {success:false, error: "Password validation failed!"}
+Finish it_rmcxz
