@@ -46,6 +46,8 @@ Repeat 3 times max
                                    Log "@info Password update successfully"
                                    // acknowledgement
                                    acknowledgement = RRF "acknowledgement.ftlh" 
+                                   // Flow finished successfully 
+                                   Finish user.uid
                               Otherwise
                                    // Password not updated
                                    Log "@info Password not updated. Error : %" E
