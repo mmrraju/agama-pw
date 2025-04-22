@@ -14,6 +14,10 @@ Repeat 3 times max
      When user.empty is not true
           // User found with e-mail 
           Log "@info User found with e-mail % " mailForm.mail
+          // OTP to verify user
+          otp = Call resetService sendEmail mailForm.mail
+          // OTP form feedback
+          otpFormFeedback = {}
      Otherwise
           // User not found
           mailUIFeedback.errorMessage = "User not found"
