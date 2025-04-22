@@ -20,7 +20,12 @@
             "lockExpTime": 180,
             "enableLock": true
         },
-        "org.gluu.agama.pw.reset": {}
+        "org.gluu.agama.pw.reset": {},
+        "": {
+            "maxLoginAttempt": 6,
+            "lockExpTime": 180,
+            "enableLock": true
+        }
     },
     "name": "agama-pw"
 }
