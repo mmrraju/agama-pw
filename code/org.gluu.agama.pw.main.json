@@ -33,7 +33,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"deletable": false,
 			"dragging": false
 		},
@@ -1978,10 +1978,44 @@
 			"dragging": false
 		},
 		{
+			"id": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
+			"type": "logNode",
+			"position": {
+				"x": 1524.1319269838707,
+				"y": 1925.8717035145446
+			},
+			"data": {
+				"id": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
+				"type": "logNode",
+				"position": {
+					"x": 1524.1319269838707,
+					"y": 1925.8717035145446
+				},
+				"previousNodeId": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Password Reset Result value is %\", passResetResult",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password Reset Result"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
 			"id": "finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
 			"type": "finishNode",
 			"position": {
-				"x": 1524.1319269838707,
+				"x": 1774.1319269838707,
 				"y": 1925.8717035145446
 			},
 			"data": {
@@ -1991,8 +2025,7 @@
 					"x": 1524.1319269838707,
 					"y": 1925.8717035145446
 				},
-				"previousNodeId": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9",
-				"branching": "success",
+				"previousNodeId": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
 				"agamaData": {
 					"nodeColor": "",
 					"titleColor": "",
@@ -2001,8 +2034,8 @@
 					"hasComment": true,
 					"comment": "Flow finish successfully",
 					"flowfilename": "",
-					"returnVariable": "passResetResult.uid",
-					"finishMode": "withVariable",
+					"returnVariable": "{ userId: passResetResult.uid}",
+					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
@@ -2010,7 +2043,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2998,10 +3031,10 @@
 			"sourceHandle": "source_triggerNode-7e14aad1-b405-452a-a310-fcb0fdd2526e"
 		},
 		{
-			"id": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9-finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
+			"id": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9-logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
 			"type": "default",
 			"source": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9",
-			"target": "finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
+			"target": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
 			"labelBgPadding": [
 				8,
 				4
@@ -3015,11 +3048,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9_success"
+		},
+		{
+			"id": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd-finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
+			"type": "default",
+			"source": "logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
+			"target": "finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
+			"targetHandle": "target_finishNode-4f56a008-ed5a-46e1-a524-091c06683e06"
 		}
 	],
 	"viewport": {
-		"x": 189.10870719907098,
-		"y": 7.719952465297183,
-		"zoom": 0.7169776240079136
+		"x": -1156.8882900080919,
+		"y": -1624.7745024089486,
+		"zoom": 1.0000000000000002
 	}
 }
