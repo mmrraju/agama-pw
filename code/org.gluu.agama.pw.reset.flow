@@ -8,3 +8,5 @@ mailUIFeedback = {}
 Repeat 3 times max
      // Mail form
      mailForm = RRF "mailform.ftlh" mailUIFeedback
+     // Check user exist or not with this mail.
+     user = Call resetService getUserEntityByMail mailForm.mail
