@@ -59,7 +59,7 @@
 		<form method="post" class="my-8">
 		  <div class="space-y-9">
 			<div class="text-sm flex justify-center items-center">
-			  <button type="submit" id="forgetpass" name="forgetpass" value="continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600 button-gradient">
+			  <button type="submit" id="forgetpass" name="forgetpass" value="continue" class="bg-transparent border-none p-0 m-0 text-green-600 hover:underline cursor-pointer">
 				Can't remember your password?
 			  </button>
 			</div>
