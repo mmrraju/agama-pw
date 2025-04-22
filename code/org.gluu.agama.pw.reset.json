@@ -845,7 +845,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "\"Password doesn't match\"",
+							"assignmentExpression": "\"Password must be at least 6 characters long and contain at least one special character\"",
 							"assignedVariableName": "resetPassFormFeedback.errorMessage"
 						}
 					],
@@ -855,14 +855,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Password doesn't match"
+					"comment": "Password Policy"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
@@ -1129,7 +1129,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1799,8 +1799,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4098.91996778059,
-		"y": -1109.1687480810515,
+		"x": -3412.9199677805905,
+		"y": -644.1687480810515,
 		"zoom": 0.8467453123625275
 	}
 }
