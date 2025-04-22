@@ -26,6 +26,14 @@ Repeat 3 times max
                When otpFormData.passcode is otp
                     // OTP matches
                     Log "@info OTP matches"
+                    // Assign variable Re-set Password Form Feedback 
+                    resetPassFormFeedback = {}
+                    // Max 3 times repeat
+                    Repeat 3 times max
+                         // Re-set Password Form
+                         passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
+                         // Check password policy
+                         isPassPolicyMatch = Call resetService passwordPolicyMatch passFormData.password
                Otherwise
                     // OTP doesn't match
                     otpFormFeedback.errorMessage = "OTP doesn't match"
