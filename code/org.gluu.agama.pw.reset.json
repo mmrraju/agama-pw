@@ -181,6 +181,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-9635c2a9-1800-4483-8868-6ade55981986",
+			"type": "callNode",
+			"position": {
+				"x": 1280,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-9635c2a9-1800-4483-8868-6ade55981986",
+				"type": "callNode",
+				"position": {
+					"x": 1280,
+					"y": 280
+				},
+				"previousNodeId": "rrfNode-9cbdc8bc-4270-4b52-a617-360f077a3600",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "getUserEntityByMail",
+					"javaVariableName": "resetService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"mailForm.mail"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check user exist or not with this mail.",
+					"asssignedVariableName": "user"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -260,11 +300,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-7dc8a431-8e7f-4ac0-9848-2291356ccca8_repeat"
+		},
+		{
+			"id": "rrfNode-9cbdc8bc-4270-4b52-a617-360f077a3600-callNode-9635c2a9-1800-4483-8868-6ade55981986",
+			"type": "default",
+			"source": "rrfNode-9cbdc8bc-4270-4b52-a617-360f077a3600",
+			"target": "callNode-9635c2a9-1800-4483-8868-6ade55981986",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-9cbdc8bc-4270-4b52-a617-360f077a3600"
 		}
 	],
 	"viewport": {
-		"x": -147,
-		"y": -8,
+		"x": -580,
+		"y": -17,
 		"zoom": 1
 	}
 }
