@@ -18,7 +18,8 @@ Repeat 6 times max
           credentials = RRF "login-basic.ftlh" uiFeedback
           // If forget password
           When credentials.forgetpass is "continue"
-               Log "@ " __________
+               // Password reset start
+               Log "@info Password reset start"
           Otherwise
                // Validate provided user credentials
                uiFeedback.succeed = Call validationService validate credentials.username credentials.password
@@ -42,5 +43,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_rcplj = {success:false, error: "Password validation failed!"}
-Finish it_rcplj
+it_wzczj = {success:false, error: "Password validation failed!"}
+Finish it_wzczj
