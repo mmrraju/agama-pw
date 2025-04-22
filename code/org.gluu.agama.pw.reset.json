@@ -336,6 +336,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-f8c21621-c3a9-40ef-b13d-7ff427cbaa11",
+			"type": "callNode",
+			"position": {
+				"x": 2030,
+				"y": 480
+			},
+			"data": {
+				"id": "callNode-f8c21621-c3a9-40ef-b13d-7ff427cbaa11",
+				"type": "callNode",
+				"position": {
+					"x": 2030,
+					"y": 480
+				},
+				"previousNodeId": "logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "sendEmail",
+					"javaVariableName": "resetService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"mailForm.mail"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "OTP to verify user",
+					"asssignedVariableName": "otp"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -491,11 +531,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-cb716f1f-ad3c-40ef-af75-9975f522b622_otherwise"
+		},
+		{
+			"id": "logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91-callNode-f8c21621-c3a9-40ef-b13d-7ff427cbaa11",
+			"type": "default",
+			"source": "logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91",
+			"target": "callNode-f8c21621-c3a9-40ef-b13d-7ff427cbaa11",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91"
 		}
 	],
 	"viewport": {
-		"x": -1018,
-		"y": -29,
+		"x": -1265,
+		"y": -55,
 		"zoom": 1
 	}
 }
