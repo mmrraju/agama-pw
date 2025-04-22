@@ -3,6 +3,7 @@ package org.gluu.agama.pw;
 import org.gluu.agama.pw.jans.JansPasswordService;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public abstract class PasswordService {
 
