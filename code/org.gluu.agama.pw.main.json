@@ -2034,7 +2034,7 @@
 					"hasComment": true,
 					"comment": "Flow finish successfully",
 					"flowfilename": "",
-					"returnVariable": "passResetResult.data",
+					"returnVariable": "passResetResult.data.userId",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -3071,8 +3071,8 @@
 		}
 	],
 	"viewport": {
-		"x": -495.1833375235601,
-		"y": -951.8864249909561,
-		"zoom": 0.7169776240079136
+		"x": -1069,
+		"y": -1716,
+		"zoom": 1
 	}
 }
