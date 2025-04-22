@@ -10,7 +10,7 @@ validationService = Call org.gluu.agama.pw.PasswordService#getInstance conf
 // Iterate x times max
 Repeat 6 times max
      // If Password Rest is True
-     When config.enablePasswordRest is true
+     When conf.enablePasswordRest is true
           // Enable Password Reset is True
           Log "@info Enable Password Reset is True"
      Otherwise
@@ -43,5 +43,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_wzczj = {success:false, error: "Password validation failed!"}
-Finish it_wzczj
+it_mqzdl = {success:false, error: "Password validation failed!"}
+Finish it_mqzdl
