@@ -1994,7 +1994,7 @@
 				"previousNodeId": "whenNode-923aed8b-8631-4e0c-975d-96bde18d6ac9",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "\"Password Reset Result value is %\", passResetResult",
+					"logMessage": "\"Password Reset Result value is %\" passResetResult",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -2009,7 +2009,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
@@ -2043,7 +2043,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
