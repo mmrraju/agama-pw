@@ -18,6 +18,17 @@ Repeat 3 times max
           otp = Call resetService sendEmail mailForm.mail
           // OTP form feedback
           otpFormFeedback = {}
+          // Max 3 times repeat 
+          Repeat 3 times max
+               // OTP Form 
+               otpFormData = RRF "otp.ftlh" otpFormFeedback
+               // If OTP match
+               When otpFormData.passcode is otp
+                    // OTP matches
+                    Log "@info OTP matches"
+               Otherwise
+                    // OTP doesn't match
+                    otpFormFeedback.errorMessage = "OTP doesn't match"
      Otherwise
           // User not found
           mailUIFeedback.errorMessage = "User not found"
