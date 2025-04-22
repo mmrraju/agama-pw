@@ -2009,7 +2009,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-4f56a008-ed5a-46e1-a524-091c06683e06",
@@ -2034,8 +2034,8 @@
 					"hasComment": true,
 					"comment": "Flow finish successfully",
 					"flowfilename": "",
-					"returnVariable": "{ userId: passResetResult.uid}",
-					"finishMode": "withSuccess",
+					"returnVariable": "passResetResult.userId",
+					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
@@ -2043,7 +2043,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3070,8 +3070,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1156.8882900080919,
-		"y": -1624.7745024089486,
-		"zoom": 1.0000000000000002
+		"x": -1317,
+		"y": -1655,
+		"zoom": 1
 	}
 }
