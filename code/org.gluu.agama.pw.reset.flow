@@ -10,3 +10,10 @@ Repeat 3 times max
      mailForm = RRF "mailform.ftlh" mailUIFeedback
      // Check user exist or not with this mail.
      user = Call resetService getUserEntityByMail mailForm.mail
+     // If user found.
+     When user.empty is not true
+          // User found with e-mail 
+          Log "@info User found with e-mail % " mailForm.mail
+     Otherwise
+          // User not found
+          mailUIFeedback.errorMessage = "User not found"
