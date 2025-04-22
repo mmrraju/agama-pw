@@ -2034,7 +2034,7 @@
 					"hasComment": true,
 					"comment": "Flow finish successfully",
 					"flowfilename": "",
-					"returnVariable": "passResetResult.userId",
+					"returnVariable": "passResetResult.data",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -2043,7 +2043,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -3070,8 +3071,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
-		"zoom": 1
+		"x": -495.1833375235601,
+		"y": -951.8864249909561,
+		"zoom": 0.7169776240079136
 	}
 }
