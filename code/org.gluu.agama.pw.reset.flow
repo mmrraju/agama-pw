@@ -34,6 +34,15 @@ Repeat 3 times max
                          passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
                          // Check password policy
                          isPassPolicyMatch = Call resetService passwordPolicyMatch passFormData.password
+                         // Password policy Match
+                         When isPassPolicyMatch is true
+                              // Password policy match
+                              Log "@info Password policy match"
+                              // Update user password
+                              inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
+                         Otherwise
+                              // Password doesn't match
+                              resetPassFormFeedback.errorMessage = "Password doesn't match"
                Otherwise
                     // OTP doesn't match
                     otpFormFeedback.errorMessage = "OTP doesn't match"
