@@ -6,3 +6,5 @@ resetService = Call org.gluu.agama.pw.ResetService#getInstance
 mailUIFeedback = {}
 // Max 3 times repeat
 Repeat 3 times max
+     // Mail form
+     mailForm = RRF "mailform.ftlh" mailUIFeedback
