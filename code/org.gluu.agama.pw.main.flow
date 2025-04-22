@@ -22,8 +22,7 @@ Repeat 6 times max
                // Password Reset Result
                Log "@info Password Reset Result value is %" passResetResult
                // Flow finish successfully
-               it_rjtds = {success:true, data: { userId: passResetResult.uid}}
-               Finish it_rjtds
+               Finish passResetResult.userId
      Otherwise
           // Validate provided user credentials
           uiFeedback.succeed = Call validationService validate credentials.username credentials.password
@@ -47,5 +46,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_yegib = {success:false, error: "Password validation failed!"}
-Finish it_yegib
+it_pclrm = {success:false, error: "Password validation failed!"}
+Finish it_pclrm
