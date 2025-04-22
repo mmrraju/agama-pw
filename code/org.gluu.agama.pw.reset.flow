@@ -38,19 +38,26 @@ Repeat 3 times max
                          When isPassPolicyMatch is true
                               // Password policy match
                               Log "@info Password policy match"
-                              // Update user password
-                              inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
-                              // If password update successfully
-                              When inum is not null
-                                   // Password update successfully
-                                   Log "@info Password update successfully"
-                                   // acknowledgement
-                                   acknowledgement = RRF "acknowledgement.ftlh" 
-                                   // Flow finished successfully 
-                                   Finish user.uid
+                              // if password match
+                              When passFormData.password is passFormData.confirmPassword
+                                   // Password and confirmPassword match
+                                   Log "@info Password and confirmPassword match"
+                                   // Update user password
+                                   inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
+                                   // If password update successfully
+                                   When inum is not null
+                                        // Password update successfully
+                                        Log "@info Password update successfully"
+                                        // acknowledgement
+                                        acknowledgement = RRF "acknowledgement.ftlh" 
+                                        // Flow finished successfully 
+                                        Finish user.uid
+                                   Otherwise
+                                        // Password not updated
+                                        Log "@info Password not updated. Error : %" E
                               Otherwise
-                                   // Password not updated
-                                   Log "@info Password not updated. Error : %" E
+                                   // Password doesn't match
+                                   resetPassFormFeedback.errorMessage = "Password doesn't match"
                          Otherwise
                               // Password doesn't match
                               resetPassFormFeedback.errorMessage = "Password doesn't match"
