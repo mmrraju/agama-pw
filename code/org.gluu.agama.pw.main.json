@@ -620,7 +620,7 @@
 					"x": 856,
 					"y": 896
 				},
-				"previousNodeId": "logNode-bcc4c4d9-6b8d-4445-8910-dd5955ffa99d",
+				"previousNodeId": "whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2",
 				"agamaData": {
 					"logMessage": "\"Forget password portion starting\"",
 					"logLevel": "info",
@@ -631,7 +631,8 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Forget password start"
-				}
+				},
+				"branching": "success"
 			},
 			"measured": {
 				"width": 170,
@@ -1834,14 +1835,21 @@
 					"variableField": "",
 					"valueField": "",
 					"conditionInputField": "",
-					"conditions": [],
+					"conditions": [
+						{
+							"variable": "credentials.forgetpass",
+							"operator": "is",
+							"dataValue": "\"continue\"",
+							"combinator": "none"
+						}
+					],
 					"nodeIcon": "ph:swap",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "If Forget password "
 				}
 			},
 			"measured": {
@@ -2855,11 +2863,29 @@
 			},
 			"sourceHandle": "source_whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2_continue",
 			"targetHandle": "target_callNode-910b51a9-b4af-43db-a86b-3d3848d1f87d"
+		},
+		{
+			"source": "whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2",
+			"sourceHandle": "source_whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2_success",
+			"target": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"targetHandle": "target_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
+			"label": "Condition met",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2source_whenNode-eaed581c-ae2f-40a9-ad30-5a505379e0b2_success-logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4target_logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4"
 		}
 	],
 	"viewport": {
-		"x": -284.2140054513727,
-		"y": -223.66172101247616,
-		"zoom": 0.6973718331752036
+		"x": -123.89129280092925,
+		"y": -286.2800475347028,
+		"zoom": 0.7169776240079136
 	}
 }
