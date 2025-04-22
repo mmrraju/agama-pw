@@ -11,101 +11,104 @@ validationService = Call org.gluu.agama.pw.PasswordService#getInstance conf
 Repeat 6 times max
      // If Password Rest is True
      When config.enablePasswordRest is true
-     // Retrieve user credentials from UI.
-     credentials = RRF "login-basic.ftlh" uiFeedback
-     // If forget password
-     When credentials.forgetpass is "continue"
-          // Forget password start
-          Log "@info Forget password portion starting"
-          // Initiate reset service
-          resetService = Call org.gluu.agama.pw.ResetService#getInstance 
-          // Assign mail form feedback 
-          mailUIFeedback = {}
-          // Max 3 times repeat
-          Repeat 3 times max
-               // Mail form
-               mailForm = RRF "mailform.ftlh" mailUIFeedback
-               // Check user exist or not with this mail.
-               user = Call resetService getUserEntityByMail mailForm.mail
-               // If user found.
-               When user.empty is not true
-                    // User found with e-mail 
-                    Log "@info User found with e-mail % " mailForm.mail
-                    // OTP to verify user
-                    otp = Call resetService sendEmail mailForm.mail
-                    // OTP form feedback
-                    otpFormFeedback = {}
-                    // Max 3 times repeat 
-                    Repeat 3 times max
-                         // OTP Form 
-                         otpFormData = RRF "otp.ftlh" otpFormFeedback
-                         // If OTP match
-                         When otpFormData.passcode is otp
-                              // OTP matches
-                              Log "@info OTP matches"
-                              // Assign variable Re-set Password Form Feedback 
-                              resetPassFormFeedback = {}
-                              // Max 3 times repeat
-                              Repeat 3 times max
-                                   // Re-set Password Form
-                                   passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
-                                   // Check password policy
-                                   isPassPolicyMatch = Call resetService passwordPolicyMatch passFormData.password
-                                   // Password policy Match
-                                   When isPassPolicyMatch is true
-                                        // Password policy match
-                                        Log "@info Password policy match"
-                                        // if password match
-                                        When passFormData.password is passFormData.confirmPassword
-                                             // Password and confirmPassword match
-                                             Log "@info Password and confirmPassword match"
-                                             // Update user password
-                                             inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
-                                             // If password update successfully
-                                             When inum is not null
-                                                  // Password update successfully
-                                                  Log "@info Password update successfully"
-                                                  // acknowledgement
-                                                  acknowledgement = RRF "acknowledgement.ftlh" 
-                                                  // Flow finished successfully 
-                                                  Finish user.uid
-                                             Otherwise
-                                                  // Password not updated
-                                                  Log "@info Password not updated. Error : %" E
-                                        Otherwise
-                                             // Password doesn't match
-                                             resetPassFormFeedback.errorMessage = "Password doesn't match"
-                                   Otherwise
-                                        // Password Policy
-                                        resetPassFormFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
-                         Otherwise
-                              // OTP doesn't match
-                              otpFormFeedback.errorMessage = "OTP doesn't match"
-               Otherwise
-                    // User not found
-                    mailUIFeedback.errorMessage = "User not found"
+          // Enable Password Reset is True
+          Log "@info Enable Password Reset is True"
      Otherwise
-          // Validate provided user credentials
-          uiFeedback.succeed = Call validationService validate credentials.username credentials.password
-          // If user credentials is valid, the flow end successfully.
-          When uiFeedback.succeed is true
-               // add entry in log file for successfull login attempt.
-               Log "@info Valid credentials provided"
-               // Password validation completed successfuly!
-               Finish credentials.username
-          // Invalid credentials provided.
-          Log "@error Invalid credentials provided"
-          When conf.enableLock is true
-               // Lock user account if needed or unlock if the expiration time  is over.
-               lockResult = Call validationService lockAccount credentials.username
-               Log "@info Account lock result" lockResult
-               uiFeedback.lockMessage = lockResult
-          // Maximum attempts reached. Password validation failed!
-          Log "@info Maximum attempts reached. Password validation failed."
-          uiFeedback.errorMessage = "Invalid credentials. Please try again!"
-          uiFeedback.uid = credentials.username
+          // Retrieve user credentials from UI.
+          credentials = RRF "login-basic.ftlh" uiFeedback
+          // If forget password
+          When credentials.forgetpass is "continue"
+               // Forget password start
+               Log "@info Forget password portion starting"
+               // Initiate reset service
+               resetService = Call org.gluu.agama.pw.ResetService#getInstance 
+               // Assign mail form feedback 
+               mailUIFeedback = {}
+               // Max 3 times repeat
+               Repeat 3 times max
+                    // Mail form
+                    mailForm = RRF "mailform.ftlh" mailUIFeedback
+                    // Check user exist or not with this mail.
+                    user = Call resetService getUserEntityByMail mailForm.mail
+                    // If user found.
+                    When user.empty is not true
+                         // User found with e-mail 
+                         Log "@info User found with e-mail % " mailForm.mail
+                         // OTP to verify user
+                         otp = Call resetService sendEmail mailForm.mail
+                         // OTP form feedback
+                         otpFormFeedback = {}
+                         // Max 3 times repeat 
+                         Repeat 3 times max
+                              // OTP Form 
+                              otpFormData = RRF "otp.ftlh" otpFormFeedback
+                              // If OTP match
+                              When otpFormData.passcode is otp
+                                   // OTP matches
+                                   Log "@info OTP matches"
+                                   // Assign variable Re-set Password Form Feedback 
+                                   resetPassFormFeedback = {}
+                                   // Max 3 times repeat
+                                   Repeat 3 times max
+                                        // Re-set Password Form
+                                        passFormData = RRF "passwordForm.ftlh" resetPassFormFeedback
+                                        // Check password policy
+                                        isPassPolicyMatch = Call resetService passwordPolicyMatch passFormData.password
+                                        // Password policy Match
+                                        When isPassPolicyMatch is true
+                                             // Password policy match
+                                             Log "@info Password policy match"
+                                             // if password match
+                                             When passFormData.password is passFormData.confirmPassword
+                                                  // Password and confirmPassword match
+                                                  Log "@info Password and confirmPassword match"
+                                                  // Update user password
+                                                  inum | E = Call resetService updateUserPassword passFormData.password mailForm.mail
+                                                  // If password update successfully
+                                                  When inum is not null
+                                                       // Password update successfully
+                                                       Log "@info Password update successfully"
+                                                       // acknowledgement
+                                                       acknowledgement = RRF "acknowledgement.ftlh" 
+                                                       // Flow finished successfully 
+                                                       Finish user.uid
+                                                  Otherwise
+                                                       // Password not updated
+                                                       Log "@info Password not updated. Error : %" E
+                                             Otherwise
+                                                  // Password doesn't match
+                                                  resetPassFormFeedback.errorMessage = "Password doesn't match"
+                                        Otherwise
+                                             // Password Policy
+                                             resetPassFormFeedback.errorMessage = "Password must be at least 6 characters long and contain at least one special character"
+                              Otherwise
+                                   // OTP doesn't match
+                                   otpFormFeedback.errorMessage = "OTP doesn't match"
+                    Otherwise
+                         // User not found
+                         mailUIFeedback.errorMessage = "User not found"
+          Otherwise
+               // Validate provided user credentials
+               uiFeedback.succeed = Call validationService validate credentials.username credentials.password
+               // If user credentials is valid, the flow end successfully.
+               When uiFeedback.succeed is true
+                    // add entry in log file for successfull login attempt.
+                    Log "@info Valid credentials provided"
+                    // Password validation completed successfuly!
+                    Finish credentials.username
+               // Invalid credentials provided.
+               Log "@error Invalid credentials provided"
+               When conf.enableLock is true
+                    // Lock user account if needed or unlock if the expiration time  is over.
+                    lockResult = Call validationService lockAccount credentials.username
+                    Log "@info Account lock result" lockResult
+                    uiFeedback.lockMessage = lockResult
+               // Maximum attempts reached. Password validation failed!
+               Log "@info Maximum attempts reached. Password validation failed."
+               uiFeedback.errorMessage = "Invalid credentials. Please try again!"
+               uiFeedback.uid = credentials.username
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_rmcxz = {success:false, error: "Password validation failed!"}
-Finish it_rmcxz
+it_vuudz = {success:false, error: "Password validation failed!"}
+Finish it_vuudz
