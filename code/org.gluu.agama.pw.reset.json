@@ -745,7 +745,165 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
+		},
+		{
+			"id": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+			"type": "whenNode",
+			"position": {
+				"x": 4530,
+				"y": 1180
+			},
+			"data": {
+				"id": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+				"type": "whenNode",
+				"position": {
+					"x": 4530,
+					"y": 1180
+				},
+				"previousNodeId": "callNode-c6ef74b2-bf01-477b-886a-7ee1d98776e0",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "isPassPolicyMatch",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password policy Match"
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+			"type": "logNode",
+			"position": {
+				"x": 4780,
+				"y": 1380
+			},
+			"data": {
+				"id": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+				"type": "logNode",
+				"position": {
+					"x": 4780,
+					"y": 1380
+				},
+				"previousNodeId": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Password policy match\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password policy match"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-50755ae4-0b27-44ce-b721-0d6c70efda33",
+			"type": "assignmentNode",
+			"position": {
+				"x": 4780,
+				"y": 930
+			},
+			"data": {
+				"id": "assignmentNode-50755ae4-0b27-44ce-b721-0d6c70efda33",
+				"type": "assignmentNode",
+				"position": {
+					"x": 4780,
+					"y": 930
+				},
+				"previousNodeId": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+				"branching": "otherwise",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Password doesn't match\"",
+							"assignedVariableName": "resetPassFormFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Password doesn't match"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
+			"type": "callNode",
+			"position": {
+				"x": 5030,
+				"y": 1380
+			},
+			"data": {
+				"id": "callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
+				"type": "callNode",
+				"position": {
+					"x": 5030,
+					"y": 1380
+				},
+				"previousNodeId": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "updateUserPassword",
+					"javaVariableName": "resetService",
+					"exceptionVariableField": "E",
+					"callType": "Call method on instance",
+					"arguments": [
+						"passFormData.password",
+						"mailForm.mail"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Update user password",
+					"asssignedVariableName": "inum"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1109,11 +1267,87 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-e8e3e133-df0e-4363-8299-e3cb55d5275c"
+		},
+		{
+			"id": "callNode-c6ef74b2-bf01-477b-886a-7ee1d98776e0-whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+			"type": "default",
+			"source": "callNode-c6ef74b2-bf01-477b-886a-7ee1d98776e0",
+			"target": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-c6ef74b2-bf01-477b-886a-7ee1d98776e0"
+		},
+		{
+			"id": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828-logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+			"type": "default",
+			"source": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+			"target": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828_success"
+		},
+		{
+			"id": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828-assignmentNode-50755ae4-0b27-44ce-b721-0d6c70efda33",
+			"type": "default",
+			"source": "whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828",
+			"target": "assignmentNode-50755ae4-0b27-44ce-b721-0d6c70efda33",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-3e3efc0f-0a91-4ef0-b1ef-c67d1c072828_otherwise"
+		},
+		{
+			"id": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d-callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
+			"type": "default",
+			"source": "logNode-8568571f-d629-40e0-84a8-02ad7afa702d",
+			"target": "callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-8568571f-d629-40e0-84a8-02ad7afa702d"
 		}
 	],
 	"viewport": {
-		"x": -3497,
-		"y": -761,
+		"x": -4450,
+		"y": -983,
 		"zoom": 1
 	}
 }
