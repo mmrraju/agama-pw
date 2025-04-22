@@ -248,13 +248,13 @@
 					"y": 450
 				},
 				"previousNodeId": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
-				"branching": "continue"
+				"branching": "otherwise"
 			},
 			"type": "rrfNode",
 			"id": "rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe",
 			"position": {
-				"x": 603,
-				"y": 656
+				"x": 1285,
+				"y": 361
 			},
 			"measured": {
 				"width": 170,
@@ -688,8 +688,8 @@
 			"id": "callNode-910b51a9-b4af-43db-a86b-3d3848d1f87d",
 			"type": "callNode",
 			"position": {
-				"x": 1054,
-				"y": 674
+				"x": 1290,
+				"y": 722
 			},
 			"data": {
 				"id": "callNode-910b51a9-b4af-43db-a86b-3d3848d1f87d",
@@ -843,7 +843,7 @@
 			"id": "whenNode-064bc657-ddc4-4ddd-b1e4-05a64f74a90a",
 			"type": "whenNode",
 			"position": {
-				"x": 1826.0972828823385,
+				"x": 1826.0972828823387,
 				"y": 1326.0486414411691
 			},
 			"data": {
@@ -1745,7 +1745,7 @@
 			"id": "callNode-8bb1a5a2-1f84-4a8e-90f7-c396b30a4b7e",
 			"type": "callNode",
 			"position": {
-				"x": 909.0363228971008,
+				"x": 909.036322897101,
 				"y": 1066.1809926614299
 			},
 			"data": {
@@ -1857,8 +1857,8 @@
 			"id": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
 			"type": "whenNode",
 			"position": {
-				"x": 819,
-				"y": 426
+				"x": 1081,
+				"y": 473
 			},
 			"data": {
 				"id": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
@@ -1894,7 +1894,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1935,6 +1935,41 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-adc97970-8bf2-497f-99aa-efa41082f746",
+			"type": "logNode",
+			"position": {
+				"x": 790.27734375,
+				"y": 547
+			},
+			"data": {
+				"id": "logNode-adc97970-8bf2-497f-99aa-efa41082f746",
+				"type": "logNode",
+				"position": {
+					"x": 1331,
+					"y": 673
+				},
+				"previousNodeId": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"Enable Password Reset is True\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Enable Password Reset is True"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -2905,11 +2940,11 @@
 			"sourceHandle": "source_repeatNode-fd826784-1f9b-42d3-bde2-1f4d84ae4dab_repeat"
 		},
 		{
-			"id": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e-rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe",
-			"type": "default",
 			"source": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
+			"sourceHandle": "source_whenNode-611f059e-9a98-4d00-b136-e6673b40024e_otherwise",
 			"target": "rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe",
-			"label": "continue",
+			"targetHandle": "target_rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe",
+			"label": "otherwise",
 			"labelBgPadding": [
 				8,
 				4
@@ -2920,13 +2955,31 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"sourceHandle": "source_whenNode-611f059e-9a98-4d00-b136-e6673b40024e_continue",
-			"targetHandle": "target_rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe"
+			"id": "xy-edge__whenNode-611f059e-9a98-4d00-b136-e6673b40024esource_whenNode-611f059e-9a98-4d00-b136-e6673b40024e_otherwise-rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbetarget_rrfNode-dbddd8f9-7be7-4de3-8539-9275a9f4fcbe"
+		},
+		{
+			"id": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e-logNode-adc97970-8bf2-497f-99aa-efa41082f746",
+			"type": "default",
+			"source": "whenNode-611f059e-9a98-4d00-b136-e6673b40024e",
+			"target": "logNode-adc97970-8bf2-497f-99aa-efa41082f746",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-611f059e-9a98-4d00-b136-e6673b40024e_success"
 		}
 	],
 	"viewport": {
-		"x": -358,
-		"y": -186,
+		"x": -632.27734375,
+		"y": -232,
 		"zoom": 1
 	}
 }
