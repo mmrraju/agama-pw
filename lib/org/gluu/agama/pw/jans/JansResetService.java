@@ -106,6 +106,9 @@ public class JansResetService extends ResetService{
         Map<String, String> labels = Optional.ofNullable(Labels.LANG_LABELS.get(this.userPreferredLanguage))
                                      .orElse(Labels.LANG_LABELS.get("en"));
 
+        LogUtils.log("Preferred language is: %s", this.userPreferredLanguage);
+        LogUtils.log("Final language used: %s", labels != null ? this.userPreferredLanguage : "en");
+
 
         IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
         String otp = digits.mapToObj(i -> "" + i).collect(Collectors.joining());
