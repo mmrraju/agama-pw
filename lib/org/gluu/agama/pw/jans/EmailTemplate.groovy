@@ -85,7 +85,7 @@ class EmailTemplate {
       </div>
       
       <div class="content">
-        <p><strong>Hii,</strong><br>
+        <p><strong>Hii Team,</strong><br>
         ${line1}</p>
 
         <div style="text-align: center;">
