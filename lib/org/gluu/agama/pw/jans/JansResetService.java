@@ -104,25 +104,32 @@ public class JansResetService extends ResetService{
 
     @Override
     public String sendEmail(String to) {
+        Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(this.userPreferredLanguage, Labels.LANG_LABELS.get("en"));
 
-        SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
         IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
         String otp = digits.mapToObj(i -> "" + i).collect(Collectors.joining());
+
+        String subject = labels.get("subject");
+        String msgText = labels.get("msgText").replace("{0}", otp);
+        String line1 = labels.get("line1");
+        String line2 = labels.get("line2");
+        String line3 = labels.get("line3");
+        String line4 = labels.get("line4");
+
+        String htmlBody = EmailTemplate.get(otp, line1, line2, line3, line4); 
+
+        SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
         String from = smtpConfiguration.getFromEmailAddress();
-        String subject = String.format(SUBJECT_TEMPLATE, otp);
-        String textBody = String.format(MSG_TEMPLATE_TEXT, otp);
-        String htmlBody = EmailTemplate.get(otp);
 
         MailService mailService = CdiUtil.bean(MailService.class);
-
-        if (mailService.sendMailSigned(from, from, to, null, subject, textBody, htmlBody)) {
+        if (mailService.sendMailSigned(from, from, to, null, subject, msgText, htmlBody)) {
             LogUtils.log("E-mail has been delivered to % with code %", to, otp);
             return otp;
         }
+
         LogUtils.log("E-mail delivery failed, check jans-auth logs");
         return null;
-
-    }
+    } 
 
     private SmtpConfiguration getSmtpConfiguration() {
         ConfigurationService configurationService = CdiUtil.bean(ConfigurationService.class);
