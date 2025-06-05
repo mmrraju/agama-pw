@@ -103,8 +103,9 @@ public class JansResetService extends ResetService{
 
     @Override
     public String sendEmail(String to) {
-        LogUtils.log("Preferred language is:  %", this.userPreferredLanguage);
-        Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(this.userPreferredLanguage, Labels.LANG_LABELS.get("ar"));
+        Map<String, String> labels = Optional.ofNullable(Labels.LANG_LABELS.get(this.userPreferredLanguage))
+                                     .orElse(Labels.LANG_LABELS.get("en"));
+
 
         IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
         String otp = digits.mapToObj(i -> "" + i).collect(Collectors.joining());
