@@ -17,7 +17,7 @@ class EmailTemplate {
     </div>
     <div style="padding: 12px; border-bottom: 1px solid #ccc;">
         <p>
-        <b>Hi,</b>
+        <b>Hii,</b>
         <br><br>
         Enter the 6-digit code below to verify your email address at gluu.org
         </p>
