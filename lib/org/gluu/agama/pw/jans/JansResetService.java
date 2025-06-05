@@ -22,6 +22,9 @@ import org.gluu.agama.pw.jans.Labels;
 
 public class JansResetService extends ResetService{
 
+    private String userPreferredLanguage;
+    private static final String LANG = "lang";
+    private static final String LOCAL = "local";
     private static final String MAIL = "mail";
     private static final String UID = "uid";
     private static final String INUM_ATTR = "inum";
