@@ -50,10 +50,9 @@ public class JansResetService extends ResetService{
             String uid = getSingleValuedAttr(user, UID);
             String inum = getSingleValuedAttr(user, INUM_ATTR);
             userPreferredLanguage = getSingleValuedAttr(user, LANG) != null 
-                        ? getSingleValuedAttr(user, LANG)
-                        : (getSingleValuedAttr(user, LOCAL) != null 
-                            ? getSingleValuedAttr(user, LOCAL)
-                            : "ar");
+                        ? getSingleValuedAttr(user, LANG) 
+                        : getSingleValuedAttr(user, LOCAL);
+
 
             // Creating a truly modifiable map
             Map<String, String> userMap = new HashMap<>();
