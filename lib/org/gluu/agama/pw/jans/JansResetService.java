@@ -49,7 +49,7 @@ public class JansResetService extends ResetService{
         if (local) {            
             String uid = getSingleValuedAttr(user, UID);
             String inum = getSingleValuedAttr(user, INUM_ATTR);
-            userPreferredLanguage = getSingleValuedAttr(user, LANG) != null 
+            this.userPreferredLanguage = getSingleValuedAttr(user, LANG) != null 
                         ? getSingleValuedAttr(user, LANG) 
                         : getSingleValuedAttr(user, LOCAL);
 
