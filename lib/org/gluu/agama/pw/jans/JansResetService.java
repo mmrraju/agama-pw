@@ -53,7 +53,7 @@ public class JansResetService extends ResetService{
                         ? getSingleValuedAttr(user, LANG)
                         : (getSingleValuedAttr(user, LOCAL) != null 
                             ? getSingleValuedAttr(user, LOCAL)
-                            : "en");
+                            : "ar");
 
             // Creating a truly modifiable map
             Map<String, String> userMap = new HashMap<>();
