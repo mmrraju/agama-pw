@@ -103,7 +103,7 @@ public class JansResetService extends ResetService{
 
     @Override
     public String sendEmail(String to) {
-        Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(this.userPreferredLanguage, Labels.LANG_LABELS.get("ar"));
+        Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(this.userPreferredLanguage, Labels.LANG_LABELS.get("en"));
 
         LogUtils.log("Preferred language is: %s", this.userPreferredLanguage);
         LogUtils.log("Final language used: %s", labels != null ? this.userPreferredLanguage : "en");
