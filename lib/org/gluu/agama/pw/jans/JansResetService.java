@@ -110,8 +110,8 @@ public class JansResetService extends ResetService{
                         
         Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(userLang, Labels.LANG_LABELS.get("en"));
 
-        LogUtils.log("Preferred language is: %", this.userPreferredLanguage);
-        LogUtils.log("Final language used: %", labels != null ? this.userPreferredLanguage : "en");
+        LogUtils.log("Preferred language is: %", userLang);
+        LogUtils.log("Final language used: %", labels != null ? userLang : "en");
 
 
         IntStream digits = RAND.ints(OTP_LENGTH, 0, 10);
