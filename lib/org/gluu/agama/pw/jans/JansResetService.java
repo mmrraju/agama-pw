@@ -124,7 +124,7 @@ public class JansResetService extends ResetService{
         String line3 = labels.get("line3");
         String line4 = labels.get("line4");
 
-        String htmlBody = EmailTemplate.get(otp); 
+        // String htmlBody = EmailTemplate.get(otp); 
 
         SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
         String from = smtpConfiguration.getFromEmailAddress();
