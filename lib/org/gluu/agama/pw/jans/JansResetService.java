@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
 import java.util.regex.Pattern;
 
 import org.gluu.agama.pw.ResetService;
-
+import org.gluu.agama.pw.jans.EmailTemplate;
 import org.gluu.agama.pw.jans.Labels;
 
 public class JansResetService extends ResetService{
@@ -110,7 +110,7 @@ public class JansResetService extends ResetService{
                         
         Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(userLang, Labels.LANG_LABELS.get("en"));
 
-        LogUtils.log("Preferred language is: %", userLang);
+        LogUtils.log("Preferred language is % ", userLang);
         LogUtils.log("Final language used: %", labels != null ? userLang : "en");
 
 
@@ -124,7 +124,7 @@ public class JansResetService extends ResetService{
         String line3 = labels.get("line3");
         String line4 = labels.get("line4");
 
-        String htmlBody = EmailTemplate.get(otp); 
+        String htmlBody = EmailTemplate.get(otp, line1, line2, line3, line4); 
 
         SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
         String from = smtpConfiguration.getFromEmailAddress();
