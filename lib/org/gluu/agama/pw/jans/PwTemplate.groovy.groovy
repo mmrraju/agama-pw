@@ -3,7 +3,7 @@ package org.gluu.agama.pw.jans;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-class Template {
+class PwTemplate {
     
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, YYYY, HH:mma (O)");
 
