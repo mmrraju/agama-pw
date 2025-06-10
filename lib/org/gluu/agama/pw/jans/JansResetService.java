@@ -60,7 +60,7 @@ public class JansResetService extends ResetService{
     
             return userMap;
         }
-        LogUtils.log("Preferred user language is 1st : %", this.userPreferredLanguage);
+
         return new HashMap<>();
     }    
 
