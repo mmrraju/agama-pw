@@ -84,7 +84,7 @@ class Template {
       </div>
       
       <div class="content">
-        <p><strong>Hi,</strong><br>
+        <p><strong>Hi Team From DB,</strong><br>
         ${line1}</p>
 
         <div style="text-align: center;">
