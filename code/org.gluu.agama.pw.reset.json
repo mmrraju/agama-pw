@@ -355,7 +355,7 @@
 				"previousNodeId": "logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "sendEmail",
+					"javaMethodName": "sendMail",
 					"javaVariableName": "resetService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
@@ -376,7 +376,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-91979dec-06cb-4b81-b24b-fcb3e534a68d",
@@ -862,7 +863,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-bf01c7fd-4842-4e76-b34d-570e815ede1c",
@@ -1799,8 +1800,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -1349,
+		"y": -3,
 		"zoom": 1
 	}
 }
