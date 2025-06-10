@@ -63,7 +63,7 @@ public class JansResetService extends ResetService{
     
             return userMap;
         }
-    
+        LogUtils.log("Preferred user language is : %", this.userPreferredLanguage);
         return new HashMap<>();
     }    
 
@@ -104,6 +104,7 @@ public class JansResetService extends ResetService{
     @Override
     public String sendMail(String to) {
         User user = getUser(MAIL, to);
+        LogUtils.log("User is: %", user);
         String userLang = getSingleValuedAttr(user, LANG) != null 
                         ? getSingleValuedAttr(user, LANG) 
                         : getSingleValuedAttr(user, LOCAL);
