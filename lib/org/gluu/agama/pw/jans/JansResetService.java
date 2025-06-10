@@ -50,8 +50,6 @@ public class JansResetService extends ResetService{
         if (local) {            
             String uid = getSingleValuedAttr(user, UID);
             String inum = getSingleValuedAttr(user, INUM_ATTR);
-            this.userPreferredLanguage = getSingleValuedAttr(user, LOCALE);
-
 
             // Creating a truly modifiable map
             Map<String, String> userMap = new HashMap<>();
@@ -108,10 +106,13 @@ public class JansResetService extends ResetService{
     
     @Override
     public String sendEmail(String to) {
-        LogUtils.log("Preferred user language is 2nd : %", this.userPreferredLanguage);
+        String  userLang = null; 
         User user = getUser(MAIL, to);
         LogUtils.log("User is: %", user);
-        String userLang = getSingleValuedAttr(user, LOCALE);
+        userLang= getSingleValuedAttr(user, LANG);
+        if (userLang == null || userLang.isBlank()){
+            userLang = getSingleValuedAttr(user, LOCALE);
+        }
                         
         Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(userLang, Labels.LANG_LABELS.get("en"));
 
