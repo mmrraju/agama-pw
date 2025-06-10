@@ -100,7 +100,8 @@ public class JansResetService extends ResetService{
     
         return getSingleValuedAttr(user, INUM_ATTR);
     }     
-
+    
+    @Override
     public String sendMail(String to) {
         User user = getUser(MAIL, to);
         String userLang = getSingleValuedAttr(user, LANG) != null 
