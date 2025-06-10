@@ -355,7 +355,7 @@
 				"previousNodeId": "logNode-1921c4dc-89d0-4a60-b63c-e5aa25989e91",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "sendMail",
+					"javaMethodName": "sendEmail",
 					"javaVariableName": "resetService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
@@ -1800,8 +1800,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1349,
-		"y": -3,
+		"x": -1740,
+		"y": -112,
 		"zoom": 1
 	}
 }
