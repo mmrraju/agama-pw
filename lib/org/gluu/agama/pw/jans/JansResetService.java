@@ -102,7 +102,7 @@ public class JansResetService extends ResetService{
     }     
     
     @Override
-    public String sendMail(String to) {
+    public String sendEmail(String to) {
         LogUtils.log("Preferred user language is : %", this.userPreferredLanguage);
         User user = getUser(MAIL, to);
         LogUtils.log("User is: %", user);
