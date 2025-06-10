@@ -1,4 +1,4 @@
-package org.gluu.agama;
+package org.gluu.agama.pw.jans;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
