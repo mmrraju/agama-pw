@@ -11,7 +11,7 @@ public abstract class ResetService {
 
     public abstract Map<String, String> getUserEntityByMail(String email);
 
-    public abstract String sendMail(String to);
+    public abstract String sendEmail(String to);
 
     public abstract String updateUserPassword(String userPassword, String mail);   
 
