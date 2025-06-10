@@ -115,7 +115,6 @@ public class JansResetService extends ResetService{
                         
         Map<String, String> labels = Labels.LANG_LABELS.getOrDefault(userLang, Labels.LANG_LABELS.get("en"));
 
-        LogUtils.log("Preferred language is 3rd % ", userLang);
         LogUtils.log("Final language used: %", labels != null ? userLang : "en");
 
 
