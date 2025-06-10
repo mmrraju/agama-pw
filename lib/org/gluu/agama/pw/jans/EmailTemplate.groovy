@@ -85,9 +85,8 @@ class EmailTemplate {
       </div>
       
       <div class="content">
-        <p><strong>Hii Team,</strong><br>
+        <p><strong>Hi,</strong><br>
         ${line1}</p>
-        <p>MMR Raju</p>
         <div style="text-align: center;">
           <div class="otp-box">${otp}</div>
         </div>
