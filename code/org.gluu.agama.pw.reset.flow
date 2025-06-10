@@ -15,7 +15,7 @@ Repeat 3 times max
           // User found with e-mail 
           Log "@info User found with e-mail % " mailForm.mail
           // OTP to verify user
-          otp = Call resetService sendMail mailForm.mail
+          otp = Call resetService sendEmail mailForm.mail
           // OTP form feedback
           otpFormFeedback = {}
           // Max 3 times repeat 
