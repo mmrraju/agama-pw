@@ -46,5 +46,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_vzffm = {success:false, error: "Password validation failed!"}
-Finish it_vzffm
+it_kfdpx = {success:false, error: "Password validation failed!"}
+Finish it_kfdpx
