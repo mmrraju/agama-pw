@@ -1,5 +1,6 @@
 Flow org.gluu.agama.pw.reset
      Basepath ""
+     Timeout 500 seconds
 // Initiate reset service
 resetService = Call org.gluu.agama.pw.ResetService#getInstance 
 // Assign mail form feedback 
@@ -70,5 +71,5 @@ Repeat 3 times max
 // Max attampt reached
 Log "@info Max attampt reached"
 // Max attempts reached
-it_fcpzu = {success:false, error: "Max attempts reached"}
-Finish it_fcpzu
+it_jkxts = {success:false, error: "Max attempts reached"}
+Finish it_jkxts
