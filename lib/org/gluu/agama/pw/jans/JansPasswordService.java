@@ -10,6 +10,7 @@ import io.jans.service.cdi.util.CdiUtil;
 import org.gluu.agama.pw.PasswordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import io.jans.agama.engine.script.LogUtils;
 
 import java.util.HashMap;
 
