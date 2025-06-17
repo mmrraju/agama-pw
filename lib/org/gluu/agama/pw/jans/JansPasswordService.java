@@ -56,7 +56,6 @@ public class JansPasswordService extends PasswordService {
     @Override
     public String lockAccount(String username) {
         User currentUser = userService.getUser(username);
-        User currentUser = userService.getUser(username);
         if (currentUser == null) {
             LogUtils.log("User % not found. Cannot lock account.", username);
             return "User not found. Cannot proceed with account lock.";
